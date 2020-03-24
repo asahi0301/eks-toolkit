@@ -90,7 +90,3 @@ outputの形式もなんでもいいですが、json にしておきます
 docker run -itd -v ~/path:/src eks-toolkit 
 ```
 このような感じで ローカルのディレクトリとコンテナのディレクトリをmountしてください
-
-
-
-
