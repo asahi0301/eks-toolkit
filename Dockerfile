@@ -5,7 +5,7 @@ LABEL maintainer=asahi0301
 RUN yum update -y && yum -y install python36-devel python3-libs python3-setuptools python3-pips git tar gzip wget jq openssh-clients && \
     python3 -m ensurepip --upgrade && python3 -m pip install --upgrade pip && \
     # Install kubectl
-    curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/darwin/amd64/kubectl && \
+    curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/linux/amd64/kubectl && \
     chmod +x ./kubectl && \
     mv ./kubectl /usr/local/bin/kubectl && \
     # Install aws-iam-authenticator for EKS
