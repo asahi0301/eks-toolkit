@@ -15,8 +15,8 @@ kubectl,eksctl といったツールを揃えること自体結構大変だっ�
 https://hub.docker.com/r/asahi0301/eks-toolkit
 
 ## インストールされている主要ソフトウェア
-- kubectl 1.15.10
-- aws-iam-authenticator 1.15.10
+- kubectl 1.16.8
+- aws-iam-authenticator 1.16.8
 - aws cli v1 (githubへのcommit時点で pip でインストールできる最新のもの)
 - eksctl (githubへのcommit時点で取得できる最新のもの)
 - cfssl, cfssljson 1.2
@@ -87,6 +87,6 @@ outputの形式もなんでもいいですが、json にしておきます
 ## Dockerコンテナ内で作成したファイルはコンテナを削除すると消えます
 作業ログや生成したファイルをローカルにも残しておきたい場合は、
 ```sh
-docker run -itd -v ~/path:/src eks-toolkit 
+docker run -itd -v ~/path:/src eks-toolkit
 ```
 このような感じで ローカルのディレクトリとコンテナのディレクトリをmountしてください
