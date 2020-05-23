@@ -2,7 +2,7 @@ FROM amazonlinux:2.0.20200207.1
 
 LABEL maintainer=asahi0301
 
-RUN yum update -y && yum -y install python36-devel python3-libs python3-setuptools python3-pips git tar gzip wget jq openssh-clients && \
+RUN yum update -y && yum -y install python36-devel python3-libs python3-setuptools python3-pips git tar gzip wget jq openssh-clients shadow-utils && \
     python3 -m ensurepip --upgrade && python3 -m pip install --upgrade pip && \
     # Install kubectl
     curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/linux/amd64/kubectl && \
