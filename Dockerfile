@@ -23,6 +23,8 @@ RUN yum update -y && yum -y install python36-devel python3-libs python3-setuptoo
     # Install kops
     curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64 && \
     chmod +x ./kops && mv ./kops /usr/local/bin/ && \
+    # Install ardocd cli v1.5.5
+    wget https://github.com/argoproj/argo-cd/releases/download/v1.5.5/argocd-linux-amd64 && mv argocd-linux-amd64 /usr/local/bin/argocd && chmod +x /usr/local/bin/argocd  && \
     # Remove cache
     rm -rf /var/cache/yum/*  && \
     yum clean all
