@@ -17,11 +17,12 @@ https://hub.docker.com/r/asahi0301/eks-toolkit
 ## インストールされている主要ソフトウェア
 - kubectl 1.16.8
 - aws-iam-authenticator 1.16.8
-- aws cli v1 (githubへのcommit時点で pip でインストールできる最新のもの)
+- aws cli v2
 - eksctl (githubへのcommit時点で取得できる最新のもの)
 - cfssl, cfssljson 1.2
 - kops (githubへのcommit時点で取得できる最新のもの)
-
+- argocd cli
+- helm v3
 
 # 前提条件
 ## Dockerのローカルインストール
