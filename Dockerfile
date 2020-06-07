@@ -29,6 +29,8 @@ RUN yum update -y && yum -y install python36-devel python3-libs python3-setuptoo
     cd /tmp && wget https://get.helm.sh/helm-v3.2.1-linux-amd64.tar.gz && tar -zxvf helm-v3.2.1-linux-amd64.tar.gz && mv linux-amd64/helm /usr/local/bin/helm && \
     # Install awscli v2
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install && \
+    # Install istioctl
+    curl -L https://istio.io/downloadIstio | sh - && mv istio-*/bin/istioctl /usr/local/bin/ && \
     # Remove cache
     rm -rf /tmp/* && \
     rm -rf /var/cache/yum/*  && \
