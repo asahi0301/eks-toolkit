@@ -31,6 +31,8 @@ RUN yum update -y && yum -y install python36-devel python3-libs python3-setuptoo
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install && \
     # Install istioctl
     curl -L https://istio.io/downloadIstio | sh - && mv istio-*/bin/istioctl /usr/local/bin/ && \
+    # Install ecs-cli v1
+    curl -o /usr/local/bin/ecs-cli https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-linux-amd64-latest && chmod +x /usr/local/bin/ecs-cli && \
     # Remove cache
     rm -rf /tmp/* && \
     rm -rf /var/cache/yum/*  && \
